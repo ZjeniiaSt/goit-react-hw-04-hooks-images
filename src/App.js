@@ -76,9 +76,7 @@ function App() {
           <Load />
         </div>
       )}
-      {status === 'resolved' && (
-        <ImageGallery images={images} onOpenModal={onOpenModal}></ImageGallery>
-      )}
+      {status === 'resolved' && <ImageGallery images={images} onOpenModal={onOpenModal} />}
       {images.length >= 12 && <OnButton onBtnClick={onBtnClick} />}
       {showModal && (
         <Modal onClose={toggleModal}>
